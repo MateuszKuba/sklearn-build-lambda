@@ -16,7 +16,7 @@ yum install -y \
 
 do_pip () {
     pip install --upgrade pip wheel
-    test -f /outputs/requirements.txt && pip install -r --no-binary /outputs/requirements.txt
+    test -f /outputs/requirements.txt && pip install --no-binary -r  /outputs/requirements.txt
 }
 
 strip_virtualenv () {
