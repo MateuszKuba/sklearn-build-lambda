@@ -17,8 +17,8 @@ yum install -y \
 do_pip () {
     pip install --upgrade pip wheel
     test -f /outputs/requirements.txt && pip install -r /outputs/requirements.txt
-    pip install --no-binary numpy numpy==1.14.0
-    pip install --no-binary scipy scipy==1.0.0
+    pip install --no-binary numpy numpy==1.16.0
+    pip install --no-binary scipy scipy==1.2.0
     pip install sklearn
 }
 
