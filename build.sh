@@ -16,8 +16,10 @@ yum install -y \
 
 do_pip () {
     pip install --upgrade pip wheel
-    test -f /outputs/requirements.txt && pip install -r /outputs/requirements.txt --no-binary :all:
-    pip install scikit-learn
+    test -f /outputs/requirements.txt && pip install -r /outputs/requirements.txt
+    pip install --no-binary numpy numpy
+    pip install --no-binary scipy scipy
+    pip install sklearn
 }
 
 strip_virtualenv () {
